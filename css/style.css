@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    transition: all .30s ease-in;
+}
+body{
+    min-height: 100vh;
+    height: 100%;
+    background:radial-gradient(#f9d349, 20% ,#d57e12);
+    position: relative;
+}
+
+/* ============================================================
+    typography
+     */
+.header h1{
+    font-size: 1.6rem;
+}
+.hero-info-box h1{
+    word-break: break-word;
+    font-family: "Permanent Marker", cursive;
+    font-size: 5rem;
+}
+.hero-info-box p{
+    font-size: 0.8rem;
+}
+
+/* ============================================================
+    layouts
+     */
+    .container{
+        width: 70%;
+        margin:0 auto;
+    }
+    .header{
+        padding: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .hero-info-box{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
+    .main{
+        margin: 4rem auto 1rem auto;
+        display: flex;
+    }
+
+    /* navigation */
+    .navigation{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    nav ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+    nav ul a{
+        font-size: .8rem;
+        margin-right: 2rem;
+        font-weight: 600;
+
+    }
+    .navigation button{
+        font-size: .8rem;
+        background-color: transparent;
+        color: white;
+        padding: .2rem 1rem;
+        border-radius: 2rem;
+        border: 1px solid white;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    /* action button */
+    .action-button{
+        display: flex;
+        margin-top: 1rem;
+    }
+    .action-button a{
+        margin-right: 1rem;
+        padding: .2rem 1rem;
+        border: 1px solid white;
+        border-radius: 2rem;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+
+    /* footer */
+    footer{
+        padding: 1rem 0;
+    }
+    .footer i{
+        cursor: pointer;
+        font-size: 1.3rem;
+        margin-right: 1rem;
+        color: #ffffffc4;
+    }
+
+
+    /* hero img */
+    .hero-img{
+        z-index: -100;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        width: 50%;
+    }
+    .hero-img img{
+        width: 100%;
+    }
+    /* active button */
+    .active{
+        border-bottom: 1.8px solid #fff;
+    }
+
+
+/* ==============================================================
+    transitions
+     */
+    .navigation button:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    nav a:hover{
+        transform: scale(1.1);
+        border-bottom: 1.8px solid #fff;
+    }
+    .footer i:hover{
+        transform: translatey(-3rem);
+        color: #fff;
+    }
+    .action-button a:hover{
+        background-color: white;
+        color: black;
+    }
+
+
+
+/* ===============================================================================
+    media queries
+     */
+
+@media(max-width:900px){
+    .container{
+        width: 90%;
+    }
+    .hero-img{
+        width: 27.03125rem;
+        height: 20.385625rem;
+    }
+}
+@media(max-width:750px){
+    .hero-img{
+        position: static;
+        width: 100%;
+    }
+    .hero-img img{
+        object-fit: cover;
+        object-position: top;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+    }
+    .footer i{
+        margin-left: 1rem;
+    }
+    .hero-info-box{
+        width: auto;
+    }
+}
+@media (max-width:557px){
+    .hero-info-box h1{
+        font-size: 60px;
+    }
+    .navigation{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+}
+@media(max-width:426px){
+    .navigation button{
+        width: 100%;
+        margin-top: .8rem;
+    }
+    .action-button{
+        text-align: center;
+        display: grid;
+        gap: 10px;
+    }
+}
+@media(max-width:320px){
+    nav{
+        display: none;
+    }
+}
